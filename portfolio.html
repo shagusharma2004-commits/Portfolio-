@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shagun Sharma | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#192849;
+    color:white;
+}
+
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15, 23, 42, 0.95);
+    backdrop-filter:blur(10px);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+.hr{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    background:linear-gradient(135deg,#142e68,#1e293b);
+}
+
+.hr-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.hr-text{
+    flex:1;
+}
+
+.hr-text h1{
+    font-size:45px;
+}
+
+.hr-text span{
+    color:#38bdf8;
+}
+
+.hr-text p{
+    margin-top:15px;
+    font-size:18px;
+    color:#cbd5e1;
+}
+
+.hr-img{
+    flex:1;
+    text-align:center;
+}
+
+.hr-img img{
+    width:400px;
+    border-radius:65%;
+    border:3px solid #38bdf8;
+    box-shadow:0 0 30px rgba(56,189,248,0.5);
+    transition:0.3s;
+}
+.hr-img img:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(58, 160, 249, 0.925);
+    
+}
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    margin-top:20px;
+    background:#38bdf8;
+    color:#0f172a;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn:hover{
+    background:white;
+}
+.social-icons{
+    margin-top:20px;
+}
+.social-icons a{
+    color:white;
+    font-size:20px;
+    margin-right:15px;
+    transition:0.3s;
+}
+.social-icons a:hover{
+    color:#38bdf8;
+}
+.cv-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 28px;
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.cv-btn:hover{
+    background:#38bdf8;
+    color:#0f172a;
+    box-shadow:0 0 20px rgba(56,189,248,0.6);
+}
+section{
+    padding:50px 8%;
+}
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+}
+.projects-container{
+    display:grid;
+    gap:25px;
+}
+.project-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(56,189,248,0.15);
+    transition:0.3s;
+}
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(56,189,248,0.3);
+}
+.project-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+.project-card a{
+    display:inline-block;
+    margin-top:15px;
+    color:#38bdf8;
+    text-decoration:none;
+}
+.project-card a:hover{
+    color:white;
+    border:2px solid #38bdf8 ;
+    border-radius:30px ;
+    padding:12px 28px;
+    transition:0.3s;
+}
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.contact-card{
+    background:#1e293b;
+    padding:25px 40px;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(56,189,248,0.15);
+    transition:0.3s;
+    text-align:center;
+}
+.contact-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(56,189,248,0.3);
+}
+.contact-card i{
+    font-size:25px;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+.about{
+    background:#1e293b;
+    border-radius:15px;
+    padding:50px;
+    box-shadow:0 0 25px rgba(56,189,248,0.15);
+    transition:0.3s;
+}
+
+.about:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(56,189,248,0.3);
+}
+
+.about h2{
+    margin-bottom:10px;
+    font-size:32px;
+    text-align:center;
+    color:#38bdf8;
+    margin-top:10px;
+}
+
+.about p{
+    margin-top:15px;
+    font-size:17px;
+    line-height:1.7;
+    color:#cbd5e1;
+}
+
+.about h3{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.about ul{
+    margin-left:20px;
+    color:#cbd5e1;
+}
+
+.about ul li{
+    margin-bottom:8px;
+}
+form{
+    background:#1e293b;
+    border-radius:15px;
+    padding:40px;
+    box-shadow:0 0 25px rgba(56,189,248,0.15);
+    transition:0.5s;
+    margin:70px auto;
+    text-align:left;
+    font-size:18px;
+    width:100%;
+    max-width:600px;
+}
+
+form:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(56,189,248,0.3);
+}
+
+.bi{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    margin-bottom:18px;
+    border-radius:8px;
+    border:1px solid #38bdf8;
+    background:#0f172a;
+    color:white;
+    outline:none;
+}
+
+textarea{
+    resize:none;
+}
+
+.ho{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 25px;
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    background-color:#1e293b;
+    cursor:pointer;
+}
+
+.ho:hover{
+    background:#38bdf8;
+    color:#1e293b;
+    box-shadow:0 0 20px rgba(56,189,248,0.6);
+}
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e293b;
+}
+@media(max-width:992px){
+    .hr-text h1{
+        font-size:36px;
+    }
+
+    .hr-img img{
+        width:300px;
+    }
+}
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+
+    .hr-container{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hr-text h1{
+        font-size:28px;
+    }
+
+    .hr-text p{
+        font-size:16px;
+    }
+
+    .hr-img img{
+        width:220px;
+        margin-bottom:20px;
+        margin-top:250px;
+    }
+
+    .about{
+        padding:30px;
+    }
+    form{
+    padding:25px;
+    font-size:14px;
+}
+
+.ho{
+    width:100%;
+    margin-bottom:10px;
+}
+
+
+    .section-title{
+        font-size:26px;
+    }
+}
+@media(max-width:480px){
+    .hr-text h1{
+        font-size:24px;
+    }
+
+    .btn{
+        padding:10px 20px;
+        font-size:14px;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">Shagun.</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="hr" id="home">
+    <div class="hr-container">
+        <div class="hr-text">
+            <h1>Hello, I'm <span>Shagun Sharma</span></h1>
+            <p>Full-Stack Developer</p>
+            <p>
+                I am a passionate Web Developer who loves creating modern,
+                responsive and user-friendly websites. I enjoy turning ideas
+                into real-world web experiences using clean and efficient code.
+            </p>
+
+            <p>
+                Currently improving my skills in JavaScript and building
+                creative projects to grow as a professional Full-Stack Developer.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="Shagun-Sharma-CV.pdf" download class="cv-btn">
+    Download CV
+</a>
+        </div>
+        <div class="hr-img">
+            <img src="WhatsApp Image 2026-03-01 at 8.44.56 PM.jpeg" alt="Shagun Sharma">
+        </div>
+    </div>
+</section>
+<section id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Amazon Clone</h3>
+            <p>Responsive Amazon homepage using HTML & CSS.</p>
+            <a href="amazone1.html">View Project </a>
+        </div>
+        <div class="project-card">
+            <h3>Text Utility App</h3>
+            <p>Chnage Text According to Command</p>
+            <a href="simplejspro.html">View Project </a>
+        </div>
+        <div class="project-card">
+            <h3>Resume Builtder App</h3>
+            <p>Add details and get resume ready</p>
+            <a href="resume.html">View Project </a>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+        <p>
+            Hello! I'm Shagun Sharma, a passionate and dedicated aspiring Web Developer
+            who loves building clean, responsive, and user-friendly websites.
+        </p>
+        <p>
+            I have strong knowledge of HTML, CSS, and JavaScript and I continuously
+            practice improving my coding skills by building different projects.
+        </p>
+        <h3>💡 My Skills</h3>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>Problem Solving</li>
+        </ul>
+        <h3>🎯 My Goal</h3>
+        <p>
+            To grow as a developer and build creative, modern and meaningful web applications.
+        </p>
+    </div>
+</section>
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form>
+        <lable>Name</lable>
+        <input class="bi" type="text" placeholder="Enter Your Name" required><br><br>
+        <label>Email</label>
+    <input  class="bi" type="email" placeholder="Enter your Email" required><br><br>
+    <label>Phone</label>
+    <input  class="bi" type="tel"  placeholder="Enter phone number" minlength="10" maxlength="12" required><br><br>
+    <label>Country</label>
+    <select class="bi">
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>Nepal</option>
+    </select><br><br>
+    <label>Enter Message</label><br>
+    <textarea row="10" column="10" class="bi"></textarea><br><br>
+    <input class="ho" type="Submit">
+    </form>
+    <div class="contact-container">
+        <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <p>shagusharma2004@email.com</p>
+        </div>
+        <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <p>+91 7807331594</p>
+        </div>
+        <div class="contact-card">
+            <i class="fas fa-location-dot"></i>
+            <p>India</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <p><i class="fa-regular fa-copyright"></i> 2026 Shagun Sharma | All Rights Reserved</p>
+</footer>
+</body>
+</html>
